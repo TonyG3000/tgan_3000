@@ -152,6 +152,11 @@ public class  Kmeans{
     {
          return clusters;
     }
+     
+     public int getDim()
+    {
+         return dataDim;
+    }
  
      private void assignData()
     {
