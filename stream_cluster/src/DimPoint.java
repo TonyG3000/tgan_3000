@@ -7,6 +7,14 @@ public class DimPoint {
 	public DimPoint(double[] x){
 		this.setUser(x);
 	}
+	
+	public double calDistance(double[] dest){
+		double sum = 0d;
+		for (int k= 0; k < user.length; k++){
+			sum += Math.pow( (Double)user[k] - (Double)dest[k], 2);
+		}
+		return Math.sqrt(sum);
+	}
 
 	public double[] getUser() {
 		return user;

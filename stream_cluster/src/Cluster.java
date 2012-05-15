@@ -3,6 +3,7 @@ import java.util.ArrayList;
 
 public class Cluster {
 	private ArrayList<DimPoint> PointSet;
+	private DimPoint Center;
 	
 	public Cluster(){
 		this.PointSet = new ArrayList<DimPoint>();
@@ -12,6 +13,19 @@ public class Cluster {
 		this.setPointSet(x);
 	}
 
+	public double calCost(){
+		double cost = 0d;
+		for (DimPoint s : PointSet){
+			cost += s.calDistance(Center.getUser());
+		}
+		return cost;
+	}
+	
+	//public void calMedianCenter(){
+	//	for (DimPoint s : PointSet){
+	//	}
+	//}
+	
 	public ArrayList<DimPoint> getPointSet() {
 		return PointSet;
 	}
@@ -31,4 +45,17 @@ public class Cluster {
 		}
 		System.out.println("[End Of Printing]");
 	}
+
+	public int getSize() {
+		return PointSet.size();
+	}
+
+	public DimPoint getCenter() {
+		return Center;
+	}
+
+	public void setCenter(DimPoint center) {
+		Center = center;
+	}
+
 }

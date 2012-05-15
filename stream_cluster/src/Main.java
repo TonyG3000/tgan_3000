@@ -12,7 +12,8 @@ public class Main {
  
       public static void main(String[] args) {
         //double[][] data = {{1d,2d},{2d,4d},{1d,1d},{0d,0d},{2d,5d}, {2d,15d}, {4d,20d}};
-        double[][] data = {{1d,2d,3d},{2d,4d,2d},{1d,1d,4d},{0d,0d,6d},{2d,5d,7d}, {2d,15d,8d}, {4d,20d,9d}};
+        double[][] data = {{1d,2d,3d},{2d,4d,2d},{1d,1d,4d},{0d,0d,6d},{2d,5d,7d}, {2d,15d,8d}, {4d,20d,9d}
+        					, {2d,4d,5d}, {2d,30d,5d}, {2d,21d,5d}};
         int numClusters = 3;
  
         Kmeans kmeans = new Kmeans(data, numClusters);
