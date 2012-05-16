@@ -38,7 +38,30 @@ public class  HQKmedian{
 		}
 	}
 	
-	//public void
+	public double calTotalSolutionCost(){
+		double sum=0;
+		for (Cluster s : clusters){
+			sum += s.calCost();
+		}
+		return sum;
+	}
+	
+	
+	public void assignDataToCluster(){
+		
+	}
+	
+	public boolean isSamePoint(DimPoint a, DimPoint b){
+		if ( a.getUser().length != b.getUser().length ){
+			return false;
+		}
+		for (int k= 0; k < a.getUser().length; k++){
+			if ( (double)a.getUser()[k] != (double)b.getUser()[k] ){
+				return false;
+			}
+		}
+		return true;
+	}
 	
 	public int findNearestCentre(DimPoint a, ArrayList<DimPoint> centers){
 		int index=0;

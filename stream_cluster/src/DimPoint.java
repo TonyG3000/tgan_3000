@@ -27,4 +27,5 @@ public class DimPoint {
 	public void toPrint() {
 		System.out.println(Arrays.toString(user));
 	}
+	
 }
